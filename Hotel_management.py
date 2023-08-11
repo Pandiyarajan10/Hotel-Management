@@ -1,10 +1,12 @@
+#creating the class hotel
 class hotel:
   def __init__(self):
     self.Break_fast_menu = hotel
+#Created function to show the menus
   def show(self):
     print('**********************************************************************\tMENU\t**********************************************************************')
     print("                            \nIdly - Rs 15\t\t\tPoori - Rs 20\t\t\tDosa - Rs 30\t\t\tPongal - Rs 25\t\t\tVadai - Rs 10\n")
-
+#creating the class customer
 class customer:
   def request_order(self):
     Total_items=[]
@@ -15,6 +17,7 @@ class customer:
     vadai=[]
     while True:
       print("1 - Idly \n2 - Poori \n3 - Dosa\n4 - Pongal\n5 - Vadai\n0 - Done")
+      #creating options for the menus
       option=int(input("Choose the item:"))
       if option ==1:
         idly_no=int(input("You have choosen Idly. Please enter the quantity:"))
@@ -52,7 +55,6 @@ class customer:
         else:
           Total_items.append(10*vadai_no)
       elif option==0:
-        #for i in Total_items:
           print("\n***************************************************************************")
           print("ITEM NAME\t\t  QUANTITY \t\t          PRICE")
           print("***************************************************************************")
@@ -77,9 +79,19 @@ class Bill_counter:
     self.order_details=Order_details
     print("\nYour order total:",sum(self.order_details),"\n")
 
+#created object "pondy_star" for class "hotel"
+
 pondy_star = hotel()
+
+#created object "pandiyarajan" for class "customer"
+
 pandiyarajan = customer()
+
+#created object "Billing" for class "Bill_counter"
+
 Billing = Bill_counter()
+
+#printing text to welcome the customers
 
 print("*******************************************************************************************************************************************************")
 print("*                                                 Welcome to PONDY STAR. We are here to serve you. Enjoy your Food.                                   *")
